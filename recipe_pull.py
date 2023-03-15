@@ -3,21 +3,9 @@ import requests
 import json
 
 
-site = "https://www.vegrecipesofindia.com/"
-recipe = 'Palak Paneer Recipe | 2 Variations'
+site = 'https://www.bonappetit.com/'
+recipe = 'Jammy Eggs With Paprika Aioli'
 
-# websites tried:
-#   https://www.ambitiouskitchen.com/
-#   https://www.bonappetit.com/
-
-
-recipes = ['Slow Cooker Chicken Tortilla Soup', 'Healthy Chicken Pot Pie Soup', 'Flourless Peanut Butter Oatmeal Chocolate Chip Cookies', 'Vegan White Bean & Roasted Butternut Squash Soup']
-
-# recipes tried:
-#   Slow Cooker Chicken Tortilla Soup
-#   Healthy Chicken Pot Pie Soup
-#   Flourless Peanut Butter Oatmeal Chocolate Chip Cookies
-#   Vegan White Bean & Roasted Butternut Squash Soup
 
 
 # Get initial page HTML
@@ -89,9 +77,7 @@ def show_recipe(url, recipe):
             for ins in json_info['HowToStep']:
                 print(ins['text'])
 
-# try all recipes
-# for recipe in recipes:
-#     show_recipe(site, recipe)
+
 
 # call code with the currently filled in recipe
 show_recipe(site, recipe)

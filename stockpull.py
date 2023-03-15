@@ -1,12 +1,20 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options 
+from datetime import datetime
 import pandas as pd
+import time
 
 url = "https://stocktwits.com/rankings/trending"
 
 # Open webdriver and navigate to the page
-driver = webdriver.Chrome()
+chrome_options = Options()
+chrome_options.add_argument('--ignore-certificate-errors')
+chrome_options.add_argument('headless')
+
+driver = webdriver.Chrome(options=chrome_options)
 driver.get(url)
+time.sleep(2)
 
 # Find needed data and extract into list
 data = driver.find_elements(By.CLASS_NAME, 'TickerTable_rankingsBodyCell__pP_NJ')
@@ -42,5 +50,9 @@ for stock_data in all_stock_data:
     stock_list.append(stock)
 
 df = pd.DataFrame(stock_list)
-print(df)
 driver.quit
+
+now = datetime.now()
+dt_string = now.strftime("%d-%m_%H-%M")
+filename = str('.\\stocks-'+ dt_string + '.csv')
+df.to_csv(path_or_buf=filename, index=False)

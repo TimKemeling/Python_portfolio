@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options 
+from datetime import datetime
 import pandas as pd 
 import time 
 import re
@@ -146,6 +147,7 @@ vol_col = df.pop('Volume in coin (24h)')
 df.insert(9 , 'Volume in coin (24h)', vol_col)
 
 
-df = df.to_string(index=False)
-
-print(df)
+now = datetime.now()
+dt_string = now.strftime("%d-%m_%H-%M")
+filename = str('.\\coinprices-'+ dt_string + '.csv')
+df.to_csv(path_or_buf=filename, index=False)

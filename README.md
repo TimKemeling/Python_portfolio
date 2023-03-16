@@ -66,8 +66,7 @@ for each piece of data. Pandas pulls this into a dataframe, and converts it into
 
 ### Coin Pull
 
-The Coin Pull project was something I came up with after doing the stocks project. I wanted to use a page with a larger dataset and landed on 
-coinmarketcap.com. Through Covid I became interested in the crypto markets and this seemed like a fun project to try my newfound skills on.
+The Coin Pull project was something I came up with after doing a project on a stock website. I wanted to use a page with a larger dataset and landed on coinmarketcap.com. Through Covid I became interested in the crypto markets and this seemed like a fun project to try my newfound skills on.
 
 There was a number of challenges I encountered in this project. Like the stocks project, coinmarketcap uses a dynamic table that updates every 
 few seconds or so. This proved to be a bit tricky to start with and next to that there was also a lot more data to work with. 
@@ -90,7 +89,7 @@ This made the program a little slower than I would like.
 selenium opens a webdriver and navigates to the page. Once the page is opened it scrolls down to the bottom to expose and load the whole table.
 once the whole table is loaded, a number of functions run to scrape the columns that did not look right and to note the color of some of the numbers to be later converted into positive or negative values. Pfter this pandas pulls the table from the HTML code.
 
-With the scraped data and table the program then formats all the colums to have the data separated where needed, or replaced by separately scraped data entirely after which the whole dataframe got exported to a csv file with date and time stamp.
+With the scraped data and table the program then formats all the columns to have the data separated where needed, or replaced by separately scraped data entirely after which the whole dataframe got exported to a csv file with date and time stamp.
 
 ##### Coin Pull Output
 [Coin_pull_csv](coinprices-15-03_12-56.csv)

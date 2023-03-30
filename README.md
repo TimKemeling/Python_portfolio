@@ -5,9 +5,9 @@ All of these projects were made with Python 3.9 and some of its libraries.
 I will note down all main libraries (and their version) with each project.
 
 ## Table of contents
-[Recipe Pull](#recipe-pull)
-[Stock Pull](#stock-pull)
-[Coin Pull](#coin-pull)
+[Recipe Pull](#recipe-pull)   
+[Stock Pull](#stock-pull)  
+[Coin Pull](#coin-pull)  
 
 
 ### Recipe Pull
@@ -21,9 +21,9 @@ The program runs only on certain websites and on recent recipes due to only usin
 I am leaving the program as is for now. I may later revise it to use a more advanced form of webscraping.
 
 #### Libraries used
-    * Beautiful soup 4.11.1
-    * Requests 2.28.2
-    * json
+* Beautiful soup 4.11.1
+* Requests 2.28.2
+* json
 
 #### General working
 
@@ -49,9 +49,9 @@ This program was a little fickle and didn't always return the info, but after pu
 and does not show any problems after running it a few times.
 
 #### Libraries used
-    * Selenium 4.7.2
-    * Pandas 1.5.2
-    * Datetime
+* Selenium 4.7.2
+* Pandas 1.5.2
+* Datetime
 
 #### General working
 
@@ -80,9 +80,9 @@ This made the program a little slower than I would like.
 
 
 #### Libraries used
-    * Selenium 4.7.2
-    * Pandas 1.5.2
-    * Datetime
+* Selenium 4.7.2
+* Pandas 1.5.2
+* Datetime
 
 #### General working
 
